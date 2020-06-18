@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    parameters {
-        string(name: 'MESSAGE', defaultValue: 'No parameter')
-    }
+ 
     stages {
         stage('Build') {
             steps {
@@ -14,11 +12,7 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('do the thing') {
-            steps {
-                echo "${params.MESSAGE}"
-            }
-        }
+
         stage('Deploy') {
             steps {
                 echo 'Deploying....'

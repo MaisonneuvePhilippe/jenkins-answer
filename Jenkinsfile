@@ -14,6 +14,11 @@ pipeline {
                 echo 'Testing..'
             }
         }
+        stage('do the thing') {
+            steps {
+                echo '${params.MESSAGE}'
+            }
+        }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'

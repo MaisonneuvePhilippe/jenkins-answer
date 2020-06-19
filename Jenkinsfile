@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Trying to build the other pipeline'
+                echo "${params.MESSAGE}"
             }
         }
         stage('Test') {

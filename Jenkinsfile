@@ -18,7 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "${params.MESSAGE}"
-                writeFile(file:"./f.txt",text:params.MESSAGE)
+                writeFile(file:"./users.txt",text:params.MESSAGE)
            
             }
         }

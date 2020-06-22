@@ -26,7 +26,6 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh """
-                    #!/bin/bash
                     input="./users.txt"
                     rm "input.tfvars"
                     echo  -e 'environment    = "development"' >> "input.tfvars"

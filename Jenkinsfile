@@ -14,6 +14,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 echo readFile("./f.txt")
+                git commit -am "Updated version number"
             }
         }
 

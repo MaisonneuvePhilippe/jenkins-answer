@@ -19,7 +19,9 @@ pipeline {
                     echo "${params.MESSAGE}"
 
                     def buckets = MESSAGE.split("|")
-                    echo buckets
+                    echo "${buckets}"
+                    
+                    
                     for (String bucket: buckets){
                         def name = bucket.split(":")[0]
                         def content = bucket.split(":")[1]

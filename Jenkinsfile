@@ -27,8 +27,8 @@ pipeline {
                         
                         def bucketAsList = bucket.split(":")
 
-                        def name "${bucketAsList.first()}"
-                        def content "${bucketAsList.last()}"
+                        def name = "${bucketAsList.first()}"
+                        def content = "${bucketAsList.last()}"
                         // def content = bucket.split(":")[1]
 
                         echo "${name} contains ${content}"

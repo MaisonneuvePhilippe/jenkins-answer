@@ -15,8 +15,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "${params.MESSAGE}"
-                writeFile(file:"./users.txt",text:params.MESSAGE)
+                script{
+                    echo "${params.MESSAGE}"
+
+                    buckets = MESSAGE.split("|")
+                    for (String bucket: buckets){
+                        def name = bucket.split(":")[0]
+                        def content = bucket.split(":")[1]
+
+                        echo "${name} contains ${content}"
+                    }
+
+                    writeFile(file:"./users.txt",text:params.MESSAGE)
+                }   
             }
         }
         stage('Test') {

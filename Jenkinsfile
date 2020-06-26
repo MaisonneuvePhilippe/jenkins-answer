@@ -22,7 +22,7 @@ pipeline {
                     echo "${buckets}"
                     
                     
-                    for (String bucket: buckets){
+                    for (String bucket: MESSAGE.split("|")){
                         def name = bucket.split(":")[0]
                         def content = bucket.split(":")[1]
 

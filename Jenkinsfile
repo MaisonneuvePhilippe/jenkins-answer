@@ -23,11 +23,11 @@ pipeline {
                     
                     
                     for (String bucket: MESSAGE.split("/")){
-                        echo "bucket"
-                        def name = bucket.split(":")
-                        def content = bucket.split(":")[1]
+                        echo "${bucket}"
+                        // def name = bucket.split(":")
+                        // def content = bucket.split(":")[1]
 
-                        echo "${name} contains ${content}"
+                        // echo "${name} contains ${content}"
                     }
 
                 }   

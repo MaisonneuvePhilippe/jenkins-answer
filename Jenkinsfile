@@ -11,12 +11,10 @@ pipeline {
     parameters {
         string(name: 'MESSAGE', defaultValue: "Il n'y a aucun message")
     }
-    environment{
-        URL = getRemoteUrlWithCredentials()
-    }
+
     stages {
         stage('Build') {
-            steps {
+            steps {c
                 echo "${params.MESSAGE}"
                 writeFile(file:"./users.txt",text:params.MESSAGE)
             }

@@ -22,7 +22,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                echo readFile("./input.tfvars")
                 
             }
         }

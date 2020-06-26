@@ -18,7 +18,7 @@ pipeline {
                 script{
                     echo "${params.MESSAGE}"
 
-                    def buckets = MESSAGE.split("|")
+                    def buckets = MESSAGE.split("/")
                     echo "${buckets}"
                     
                     

@@ -18,7 +18,7 @@ pipeline {
                 script{
                     echo "${params.MESSAGE}"
 
-                    buckets = MESSAGE.split("|")
+                    def buckets = MESSAGE.split("|")
                     for (String bucket: buckets){
                         def name = bucket.split(":")[0]
                         def content = bucket.split(":")[1]
@@ -26,7 +26,6 @@ pipeline {
                         echo "${name} contains ${content}"
                     }
 
-                    writeFile(file:"./users.txt",text:params.MESSAGE)
                 }   
             }
         }

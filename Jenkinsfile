@@ -23,6 +23,7 @@ pipeline {
                     
                     
                     for (String bucket: MESSAGE.split("/")){
+                        echo "loop"
                         def name = bucket.split(":")[0]
                         def content = bucket.split(":")[1]
 

@@ -26,8 +26,7 @@ pipeline {
                         echo "${bucket}"
                         
                         def name = bucket.split(":")
-
-                        echo name
+                        echo name.getAt(0)
                         // def content = bucket.split(":")[1]
 
                         // echo "${name} contains ${content}"
